@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 struct pokemon {
   char *name;
   char *type;
@@ -11,4 +12,9 @@ struct pokemon *make_pokemon(char *name, char *type) {
   output->name = name;
   output->type = type;
   return output;
+}
+int main() {
+  struct pokemon *weedle = make_pokemon("weedle", "bug/grass");
+  whos_that_pokemon(weedle);
+  return 0;
 }
