@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 struct pokemon {
   char *name;
   char *type;
@@ -12,6 +13,10 @@ struct pokemon *make_pokemon(char *name, char *type) {
   output->name = name;
   output->type = type;
   return output;
+}
+char *random_type() {
+  srand(time(NULL));
+  return {"Normal", "Fire", "Water", "Grass", "Electric", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dark", "Dragon", "Steel", "Fairy"}[rand() % 18];
 }
 int main() {
   struct pokemon *weedle = make_pokemon("weedle", "bug/grass");
