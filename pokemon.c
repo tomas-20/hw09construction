@@ -19,7 +19,7 @@ char *random_type() {
   return {"Normal", "Fire", "Water", "Grass", "Electric", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dark", "Dragon", "Steel", "Fairy"}[rand() % 18];
 }
 int main() {
-  struct pokemon *weedle = make_pokemon("weedle", "bug/grass");
+  struct pokemon *weedle = make_pokemon("Weedle", "Bug/Grass");
   whos_that_pokemon(weedle);
   return 0;
 }
